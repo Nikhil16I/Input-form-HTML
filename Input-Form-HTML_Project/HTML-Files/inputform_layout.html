@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Input Form</title>
+    <link rel="stylesheet" href="../CSS-all-here/inputform_css_layout.css">
+</head>
+<body>
+    <form>
+        <header class="headerContainer"><h1>Form Input Fields</h1></header>
+        <div>
+            <label for="text">Full Name</label>
+            <input type="text" id="text" name="text">
+            <error-output class="text-error" for="text"></error-output>
+        </div>
+        <div>
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd" autocomplete="Current-password">
+        </div>
+        <div>
+            <label for="email">Email ID</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="url">Input URL</label>
+            <input type="url" id="url" name="url">
+        </div>
+        <div>
+            <label for="number">Phone Number</label>
+            <input type="number" id="number" name="number">
+        </div>
+        <div>
+            <label for="tel">Telephone Number</label>
+            <input type="tel" id="tel" name="tel">
+        </div>
+        <div>
+            <label for="search">Search Category</label>
+            <input type="search" id="search" name="search">
+        </div>
+        <div class="nativeDateTimePicker">
+            <label for="party">Input Date And Time</label>
+            <input type="datetime-local" id="party" name="bday">
+            <span class="validity"></span>
+        </div>
+        <div>
+            <label for="salary">Choose level Salary</label>
+            <input type="range" id="salary" name="salary" min="300000" max="500000" step="100" value="400000">
+            <output class="salary-output" for="salary">400000</output>
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+    <script type="text/javacript" src="../JS-code-all-here/"></script>
+</body>
+</html>
