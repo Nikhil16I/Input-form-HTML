@@ -35,6 +35,18 @@ phoneNumber.addEventListener('input' , function(){
         phoneNumberError.textContent = "Invalid Phone Number !";
     }
 });
+// Checking if Password is valid while Inputing
+const password = document.querySelector('#pwd');
+const passwordError = document.querySelector('.password-error');
+password.addEventListener('input' , function(){
+    let passwordRegex =  RegExp('^[0-9]{2}[\s]{1}[0-9]{10}')
+    if(passwordRegex.test(password.value)){
+        passwordError.textContent = " ";
+    }
+    else{
+        passwordError.textContent = "Invalid Password ! Input a Valid Password";
+    }
+});
 //Getting Output for Salary
 const salary = document.querySelector('#salary');
 const salaryOuput = document.querySelector('.salary-output');
