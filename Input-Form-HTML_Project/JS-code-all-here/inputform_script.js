@@ -23,6 +23,18 @@ mail.addEventListener('input' , function(){
         mailError.textContent = "Mail is InValid ,Input a valid Email ID";
     }
 });
+// Checking if PhoneNumber is valid while Inputing
+const phoneNumber = document.querySelector('#number');
+const phoneNumberError = document.querySelector('.number-error');
+phoneNumber.addEventListener('input' , function(){
+    let phoneNumberRegex =  RegExp('^[0-9]{2}[\s]{1}[0-9]{10}')
+    if(phoneNumberRegex.test(phoneNumber.value)){
+        phoneNumberError.textContent = " ";
+    }
+    else{
+        phoneNumberError.textContent = "Invalid Phone Number !";
+    }
+});
 //Getting Output for Salary
 const salary = document.querySelector('#salary');
 const salaryOuput = document.querySelector('.salary-output');
