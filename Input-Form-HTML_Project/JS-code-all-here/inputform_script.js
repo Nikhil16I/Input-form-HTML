@@ -39,7 +39,7 @@ phoneNumber.addEventListener('input' , function(){
 const password = document.querySelector('#pwd');
 const passwordError = document.querySelector('.password-error');
 password.addEventListener('input' , function(){
-    let passwordRegex =  RegExp('^[0-9]{2}[\s]{1}[0-9]{10}')
+    let passwordRegex =  RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=[\w]*[\W][\w]*$)(?=.*[a-z]).{8,}$')
     if(passwordRegex.test(password.value)){
         passwordError.textContent = " ";
     }
