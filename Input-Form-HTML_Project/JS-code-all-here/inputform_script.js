@@ -36,10 +36,11 @@ phoneNumber.addEventListener('input' , function(){
     }
 });
 // Checking if Password is valid while Inputing
+//With Minimum 8-Characters
 const password = document.querySelector('#pwd');
 const passwordError = document.querySelector('.password-error');
 password.addEventListener('input' , function(){
-    let passwordRegex =  RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=[\w]*[\W][\w]*$)(?=.*[a-z]).{8,}$')
+    let passwordRegex = RegExp('[A-Za-z0-9]{8}')
     if(passwordRegex.test(password.value)){
         passwordError.textContent = " ";
     }
